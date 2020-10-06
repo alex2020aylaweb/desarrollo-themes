@@ -7,11 +7,20 @@ if (have_posts()):   // si tenemos entradas...
         get_template_part('templates/content', 'post'); // esto es lo mas aconsejable para tener aqui solo codigo php
       
     endwhile;
+
 else: // en caso contrario si no hay entradas content-none.php tendrá la información de NO contenido.
-    get_template_part('content','none');
- 
-endif;
+    get_template_part('content','none'); ?>
 
 
-?>
+    
+    <?php  
+    endif; ?>
+    
+    </div> <!-- /.blog-main --> 
+    <?php get_sidebar(); ?>
+    </div> <!-- /.row -->
+
+
+
+
 </main>
